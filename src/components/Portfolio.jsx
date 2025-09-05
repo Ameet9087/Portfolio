@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { FaEnvelope, FaPhone, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const DATA = {
   name: "Ameet Upendra Singh",
@@ -8,14 +9,14 @@ const DATA = {
   resumeUrl: "/TestingResume.pdf",
   photo: "/office.jpg", 
   contacts: {
-    email: "https://mail.google.com/mail/?view=cm&fs=1&to=ameetsingh2000@gmail.com",
+    email: "mailto:ameetsingh2000@gmail.com",
     phone: "tel:+918766762668",
     github: "https://github.com/ameet9087",
     linkedin: "https://www.linkedin.com/in/ameet-singh-50386529b/",
   },
   skills: [
     "Manual Testing", "Automation (Selenium)", "API Testing (Postman)",
-    "Performance (JMeter)", "Java / Python", "SQL", "Jira / TestRail", "CI/CD"
+    "Performance (JMeter)", "Java", "SQL", "Jira", "Putty"
   ],
   projects: [
     { title: "E-commerce QA", desc: "Automation + Manual testing for checkout, payments and search. Implemented Selenium TestNG framework and CI integration.", link: "#" },
@@ -23,15 +24,42 @@ const DATA = {
     { title: "Banking Performance Suite", desc: "Load testing with JMeter & k6 simulating peak hours, reduced p95 latency by 38%.", link: "#" },
   ],
   experience: [
-    { role: "Senior QA Engineer", company: "ABC Technologies", period: "2022 — Present", bullets: ["Led automation efforts for web and API testing.","Mentored 4 junior testers; set up CI test gates."] },
-    { role: "QA Engineer", company: "XYZ Solutions", period: "2019 — 2022", bullets: ["Planned test strategies for releases.","Executed performance tests and reported bottlenecks."] },
+  {
+      role: "Automation Tester",
+      company: "157Industries Private Limited",
+      period: "01/09/24 - Present",
+      bullets: ["Testing the Application and Managing the Team"]
+    },
+    {
+      role: "Web Development Intern",
+      company: "VeriTech IT Software Service",
+      period: "10/01/25 - 10/03/25",
+      bullets: ["Creating and developing UI"]
+    },
+    
   ],
   education: [
-    { degree: "B.Tech. Mechanical Engineering", school: "Institute of Engineering", year: "2015 — 2019" },
-    { degree: "Diploma in Software Testing", school: "Online Academy", year: "2020" },
+    {
+      degree: "Bachelor Of Engineering (Mechanical Engineering)",
+      school: "Anjuman College Of Engineering And Technology",
+      year: "2017 - 2021",
+      score:"8.7"
+    },
+    {
+      degree: "Higher Secondary Certification",
+      school: "Narayana Junior College",
+      year: "2015 - 2017",
+      score:"9.0"
+    },
+    {
+      degree: "Secondary School Certification",
+      school: "St. Ann's English Medium School(CBSE)",
+      year: "2014 - 2015",
+      score:"9.0"
+    },
   ],
-  certifications: ["ISTQB Foundation Level", "Certified Agile Tester", "Selenium WebDriver", "Postman API Testing"],
-  interests: ["Automation Frameworks", "Robotics & IoT", "Debugging Puzzles", "QA Communities"]
+  certifications: ["Full Stack Java Development", "Automation Testing", "Web Development Intership", "Postman API Testing"],
+  interests: ["Palying Indor & Outdor", "Travelling", "Exploring New Things"]
 }
 
 const sectionVariant = {
@@ -57,7 +85,7 @@ export default function Portfolio(){
           <p className="hero-tag">{DATA.tagline}</p>
           <div className="hero-actions">
             <a className="btn primary" href={DATA.resumeUrl} download>Download Resume</a>
-            <a className="btn ghost" href="#contact">Contact</a>
+            
             </div>
             </div>
           <img src={DATA.photo} alt="Profile" className="hero-photo" />
@@ -112,7 +140,7 @@ export default function Portfolio(){
             {DATA.education.map(ed=>(
               <div key={ed.degree} className="item">
                 <h3>{ed.degree}</h3>
-                <p className="muted">{ed.school} · <span className="period">{ed.year}</span></p>
+                <p className="muted">{ed.school} | <span className="period">{ed.year}</span> | <span className="period">{ed.score}</span></p>
               </div>
             ))}
           </div>
@@ -136,21 +164,34 @@ export default function Portfolio(){
 
         {/* Contact */}
         <motion.section
-          id="contact"
-          className="card"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={sectionVariant}
-          transition={{ duration: 0.5, delay: 0.36 }}
->   <h2>Contact</h2>
-  <div className="contact-grid">
-    <a className="contact-item" href={DATA.contacts.email}  > <strong>Email:</strong> <span className="muted" >{DATA.contacts.email}</span></a>
-    <a className="contact-item" href={DATA.contacts.phone} ><strong>Phone:</strong> <span className="muted" href={DATA.contacts.phone}>8766762668</span></a>
-    <a className="contact-item" href={DATA.contacts.github} ><strong>GitHub:</strong> <span className="muted">{DATA.contacts.github}</span></a>
-    <a className="contact-item" href={DATA.contacts.linkedin} ><strong>LinkedIn:</strong> <span className="muted">{DATA.contacts.linkedin}</span></a>
-  </div>
-</motion.section>
+      id="contact"
+      className="card"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      variants={sectionVariant}
+      transition={{ duration: 0.5, delay: 0.36 }}
+    >
+      <h2>Contact</h2>
+      <div className="contact-grid icons-only">
+        <a href={DATA.contacts.email} target="_blank" rel="noopener noreferrer">
+          <FaEnvelope size={30} />
+        </a>
+        <a href={DATA.contacts.phone} target="_blank" rel="noopener noreferrer">
+          <FaPhone size={30} />
+        </a>
+        <a href={DATA.contacts.github} target="_blank" rel="noopener noreferrer">
+          <FaGithub size={30} />
+        </a>
+        <a
+          href={DATA.contacts.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaLinkedin size={30} />
+        </a>
+      </div>
+    </motion.section>
 
       </main>
 
