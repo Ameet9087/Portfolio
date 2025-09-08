@@ -1,13 +1,15 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { FaEnvelope, FaPhone, FaGithub, FaLinkedin } from "react-icons/fa";
+import profile from "../assets/office.jpg"
+import resume from "../assets/TestingResume.pdf"
 
 const DATA = {
   name: "Ameet Upendra Singh",
   title: "Software Tester — Mechanical Engineering Mindset",
   tagline: "Precision in testing, engineered for quality.",
-  resumeUrl: "/TestingResume.pdf",
-  photo: "/office.jpg", 
+  resumeUrl: resume,
+  photo: profile, 
   contacts: {
     email: "mailto:ameetsingh2000@gmail.com",
     phone: "tel:+918766762668",
@@ -19,9 +21,9 @@ const DATA = {
     "Performance (JMeter)", "Java", "SQL", "Jira", "Putty"
   ],
   projects: [
-    { title: "E-commerce QA", desc: "Automation + Manual testing for checkout, payments and search. Implemented Selenium TestNG framework and CI integration.", link: "#" },
-    { title: "Healthcare API Testing", desc: "Postman + Newman collections, contract tests and negative scenarios for FHIR APIs.", link: "#" },
-    { title: "Banking Performance Suite", desc: "Load testing with JMeter & k6 simulating peak hours, reduced p95 latency by 38%.", link: "#" },
+    { title: "E-commerce QA", desc: "Automation + Manual testing for checkout, Add and search. Implemented Selenium TestNG framework", link: "https://github.com/Ameet9087/vTiger.git" },
+    { title: "Swagger API Testing", desc: "Postman, contract tests and negative scenarios for given APIs.", link: "https://petstore.swagger.io/" },
+    { title: "Weather", desc: "Created a Weather forecast webpage ,where u can see the weather of any Area.", link: "https://github.com/Ameet9087/Weather.git" },
   ],
   experience: [
   {

@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&display=swap');
 
+html {
+  scroll-behavior: smooth;
+  /* enables smooth scrolling */
+}
 :root {
   --bg: #071028;
   --card: #0f2340;
@@ -433,6 +437,7 @@ body {
 .contact-grid.icons-only {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 150px;
 }
 
@@ -446,4 +451,181 @@ body {
   transform: scale(1.2);
   color: #ffd900;
   /* glowing green hover */
+}
+/* Small Devices (<= 768px) */
+@media (max-width: 768px) {
+
+  /* Hero Section */
+  .hero-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .hero-photo {
+    width: 140px;
+    height: 140px;
+  }
+
+  .hero-name {
+    font-size: 1.8rem;
+  }
+
+  .hero-title {
+    font-size: 1rem;
+  }
+
+  /* Navbar */
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: inline-block;
+  }
+
+  /* Contact icons */
+  .contact-grid.icons-only {
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .contact-grid.icons-only a {
+    font-size: 1.5rem;
+  }
+
+  /* Sidebar full width on mobile */
+  .sidebar {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+  }
+
+  .sidebar-links {
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  .sidebar-links a {
+    font-size: 1.2rem;
+    padding: 16px 0;
+  }
+}
+
+/* Very Small Devices (<= 480px) */
+/* Very Small Devices (<= 480px) */
+@media (max-width: 480px) {
+
+  /* Hero Section */
+  .hero-card {
+    padding: 16px;
+    gap: 16px;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .hero-photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .hero-name {
+    font-size: 1.2rem;
+  }
+
+  .hero-title {
+    font-size: 0.9rem;
+  }
+
+  .hero-tag {
+    font-size: 0.85rem;
+  }
+
+  /* Buttons */
+  .btn {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  /* Navbar */
+  .nav-inner {
+    padding: 8px 12px;
+  }
+
+  .live-logo {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+  }
+
+  .hamburger {
+    font-size: 18px;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    width: auto;
+    height: auto;
+    padding: 20px;
+    background: rgba(77, 129, 189, 0.1);
+      /* transparent effect */
+      backdrop-filter: blur(10px);
+      /* frosted glass look */
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 20px;
+  }
+
+  .sidebar-links {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .sidebar-links a {
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+
+  /* Cards */
+  .card {
+    padding: 14px;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+  }
+
+  /* Timeline */
+  .timeline-item {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .period {
+    font-size: 0.8rem;
+  }
+
+  /* Certifications */
+  .cert-grid li {
+    font-size: 0.85rem;
+    padding: 6px 8px;
+  }
+
+  /* Contact icons */
+  .contact-grid.icons-only {
+    gap: 20px;
+  }
+
+  .contact-grid.icons-only a {
+    font-size: 1.2rem;
+  }
+
+  /* Footer */
+  .footer {
+    font-size: 0.8rem;
+    margin-top: 20px;
+  }
 }
